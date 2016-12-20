@@ -1,0 +1,62 @@
+dn: ou=dhcp,dc=servus2,dc=inf
+ou: dhcp
+objectClass: top
+objectClass: organizationalUnit
+description: DHCP Servers
+
+dn: cn=servidor,ou=dhcp,dc=servus2,dc=inf
+cn: servidor
+objectClass: top
+objectClass: dhcpServer
+dhcpServiceDN: cn=config,ou=dhcp,dc=servus2,dc=inf
+
+dn: cn=config,ou=dhcp,dc=servus2,dc=inf
+cn: config
+objectClass: top
+objectClass: dhcpService
+dhcpPrimaryDN:  cn=servidor,ou=dhcp,dc=servus2,dc=inf
+dhcpStatements: ddns-update-style none
+dhcpStatements: get-lease-hostnames true
+dhcpStatements: use-host-decl-names true
+
+dn: cn=192.168.10.0,cn=config,ou=dhcp,dc=servus2,dc=inf
+cn: 192.168.10.0
+objectClass: top
+objectClass: dhcpSubnet
+objectClass: dhcpOptions
+dhcpNetMask: 24
+dhcpRange: 192.168.10.100 192.168.10.150
+dhcpStatements: default-lease-time 600
+dhcpStatements: max-lease-time 7200
+dhcpOption: subnet-mask 255.255.255.0
+dhcpOption: routers 192.168.10.1
+dhcpOption: domain-name-servers 192.168.2.200, 8.8.8.8
+dhcpOption: domain-name "servus2.inf"
+
+dn: cn=192.168.20.0,cn=config,ou=dhcp,dc=servus2,dc=inf
+cn: 192.168.20.0
+objectClass: top
+objectClass: dhcpSubnet
+objectClass: dhcpOptions
+dhcpNetMask: 24
+dhcpRange: 192.168.20.100 192.168.20.150
+dhcpStatements: default-lease-time 600
+dhcpStatements: max-lease-time 7200
+dhcpOption: subnet-mask 255.255.255.0
+dhcpOption: routers 192.168.20.1
+dhcpOption: domain-name-servers 192.168.2.200, 8.8.8.8
+dhcpOption: domain-name "servus2.inf"
+
+dn: cn=pc1-t1,cn=192.168.10.0,cn=config,ou=dhcp,dc=servus2,dc=inf
+cn: pc1-t1
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 08:00:27:14:0e:38
+dhcpStatements: fixed-address 192.168.10.101
+
+dn: cn=pc1-t2,cn=192.168.20.0,cn=config,ou=dhcp,dc=servus2,dc=inf
+cn: pc1-t2
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 08:00:27:23:98:ba
+dhcpStatements: fixed-address 192.168.20.101

@@ -1,0 +1,139 @@
+# Create top-level object in domain
+dn: dc=servus2.inf,dc=local
+objectClass: top
+objectClass: dcObject
+objectclass: organization
+o: Example Organization
+dc: servus2.inf
+description: LDAP Example 
+
+# Admin user.
+dn: cn=admin,dc=servus2.inf,dc=local
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP administrator
+userPassword: admin
+
+dn: ou=usuarios,dc=servus2.inf,dc=local
+objectClass: organizationalUnit
+ou: usuarios
+
+dn: ou=grupos,dc=servus2.inf,dc=local
+objectClass: organizationalUnit
+ou: grupos
+
+dn: cn=grupoAlumnos,ou=grupos,dc=servus2.inf,dc=local
+objectClass: posixGroup
+cn: grupoAlumnos
+gidNumber: 50000
+
+dn: cn=grupoAdmin,ou=grupos,dc=servus2,dc=inf
+objectClass: posixGroup
+cn: grupoAdmin
+gidNumber: 50002
+
+dn: uid=noeliacg,ou=usuarios,dc=servus2.inf,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: top
+objectClass: organizationalPerson
+uid: noeliacg
+cn: noeliacg
+gidNumber: 50000
+homeDirectory: /home/pub/asir/noeliacg
+sn: Calcis
+sn: Garcia
+uidNumber: 5001
+businessCategory: segundo
+carLicense: 31397452L
+departmentNumber: asir
+employeeNumber: 12457
+employeeType: segundo
+gecos: Noelia,Calcis,Garcia
+givenName: Noelia
+homePhone: 956211852
+homePostalAddress: Luis pereira 12
+l: San fernando
+loginShell: /bin/bash
+mail: noeliacalcis@gmail.com
+mobile: 623857845
+postalCode: 11100
+shadowLastChange: 15964
+shadowMax: 99999
+shadowMin: 300
+shadowWarning: 7
+st: Cadiz
+title: Bachillerato ciencias y tecnologias
+userPassword: {CRYPT}$6$QKFEAmBXX4I$MRdFDDo9PiGPNrt5.ULo7mKXBFJRquAqfNGf8ufEPGk7ljtoBUgP0Ufe6s78vptDSMJ8a0aTNe6eOgwKE71pw1
+
+dn: uid=diego,ou=usuarios,dc=servus2,dc=inf
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: top
+objectClass: organizationalPerson
+cn: diego
+gidNumber: 50002
+homeDirectory: /home/pub/asir/diego
+sn: Perez
+sn: Garcia
+uid: diego
+uidNumber: 5003
+businessCategory: segundo
+carLicense: 31393452L
+departmentNumber: asir
+employeeNumber: 12458
+employeeType: segundo
+gecos: Diego,Perez,Garcia
+givenName: Diego
+homePhone: 902021234
+homePostalAddress: Real 2
+l: Cadiz
+loginShell: /bin/bash
+mail: diego@gmail.com
+mobile: 623347845
+postalCode: 11110
+shadowLastChange: 15964
+shadowMax: 99999
+shadowMin: 300
+shadowWarning: 7
+st: Cadiz
+title: Bachillerato ciencias y tecnologias
+userPassword: {CRYPT}$6$8MAEWQAZSS$G6x/zBOQKC/MRYNoVMx2qh2KlPDcQiZAaumjUvbSikqnGZgmo6SWtY6yCvpwt/.kwBAgMITZrBpUS0Hdj9G5M0
+
+dn: uid=profesor,ou=usuarios,dc=servus2,dc=inf
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: top
+objectClass: organizationalPerson
+cn: profesor
+gidNumber: 50002
+homeDirectory: /home/pub/asir/profesor
+sn: Perez 
+sn: Olmos
+uid: profesor   
+uidNumber: 5004
+businessCategory: segundo
+carLicense: 31393452L
+departmentNumber: asir
+employeeNumber: 12459
+employeeType: segundo
+gecos: profesor,Perez,Olmos
+givenName: profesor
+homePhone: 902021214
+homePostalAddress: Real 12 
+l: Cadiz       
+loginShell: /bin/bash
+mail: profesor@gmail.com
+mobile: 623347845
+postalCode: 11110
+shadowLastChange: 15964
+shadowMax: 99999
+shadowMin: 300
+shadowWarning: 7
+st: Cadiz
+title: Bachillerato ciencias y tecnologias
+userPassword: {CRYPT}$6$QMGTxUNlPZ$AOLcGSzKsGqL6qPQl1QlZZtsVhG3o7M6r6oGG2GKqaWxCJaa7gD0Bln.RHkFjJDb34wMf8Kk6H9CapcQgcirB.

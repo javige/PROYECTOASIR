@@ -1,0 +1,24 @@
+dn: ou=automontaje,dc=servus2,dc=inf
+ou: automontaje
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=auto.master,ou=automontaje,dc=servus2,dc=inf
+objectClass: top
+objectClass: automountMap
+ou: auto.master
+
+dn: cn=/home/pub/asir,ou=auto.master,ou=automontaje,dc=servus2,dc=inf
+objectClass: automount
+cn: /home/pub/asir
+automountInformation: ldap 192.168.2.200:ou=auto.home,ou=automontaje,dc=servus2,dc=inf
+
+dn: ou=auto.home,ou=automontaje,dc=servus2,dc=inf
+objectClass: top
+objectClass: automountMap
+ou: auto.home
+
+dn: cn=noeliacg,ou=auto.home,ou=automontaje,dc=servus2,dc=inf
+objectClass: automount
+cn: noeliacg
+automountInformation: -fstype=nfs4 192.168.2.200:/home/pub/asir/noeliacg

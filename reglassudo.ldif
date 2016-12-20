@@ -1,0 +1,64 @@
+dn: ou=sudoers,dc=servus2,dc=inf
+ou: sudoers
+objectClass: top
+objectClass: organizationalUnit
+description: sudoers
+
+dn: cn=defaults,ou=sudoers,dc=servus2,dc=inf
+objectClass: top
+objectClass: sudoRole
+cn: defaults
+sudoOption: env_reset
+sudoOption: mail_badpass 
+sudoOption: secure_path+="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+sudoOrder: 1
+
+dn: cn=root,ou=sudoers,dc=servus2,dc=inf
+objectClass: top
+objectClass: sudoRole
+cn: root
+sudoUser: root
+sudoHost: ALL
+sudoRunas: ALL
+sudoCommand: ALL
+sudoRunAsGroup: ALL
+sudoOrder: 2
+
+dn: cn=%grupoAdmin,ou=sudoers,dc=servus2,dc=inf
+objectClass: top
+objectClass: sudoRole
+cn: %grupoAdmin
+sudoUser: %grupoAdmin
+sudoHost: 192.168.10.101
+sudoRunAsUser: ALL
+sudoCommand: ALL
+sudoCommand: !/usr/bin/sudoedit
+sudoCommand: !/bin/passwd
+sudoCommand: !/usr/bin/passwd
+sudoCommand: !/bin/su
+sudoCommand: !/bin/bash
+sudoCommand: !/bin/dash
+sudoCommand: !/bin/sh
+sudoCommand: !/usr/bin/tclsh
+sudoCommand: !/usr/bin/ssh
+sudoOrder: 3
+
+dn: cn=diego,ou=sudoers,dc=servus2,dc=inf
+objectClass: top
+objectClass: sudoRole
+cn: diego
+sudoUser: diego
+sudoHost: ALL 
+sudoRunAsUser: ALL
+sudoCommand: ALL
+sudoCommand: !/usr/bin/sudoedit
+sudoCommand: !/bin/passwd
+sudoCommand: !/usr/bin/passwd
+sudoCommand: !/bin/su
+sudoCommand: !/bin/bash
+sudoCommand: !/bin/dash
+sudoCommand: !/bin/sh
+sudoCommand: !/usr/bin/tclsh
+sudoCommand: !/usr/bin/ssh
+sudoOrder: 4
+

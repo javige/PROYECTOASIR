@@ -1,0 +1,15 @@
+dn: cn=diego,ou=auto.home,ou=automontaje,dc=servus2,dc=inf
+objectClass: automount
+cn: diego
+automountInformation: -fstype=nfs4 192.168.2.200:/home/pub/asir/diego
+
+dn: cn=pepe,ou=auto.home,ou=automontaje,dc=servus2,dc=inf
+objectClass: automount
+cn: pepe
+automountInformation: -fstype=nfs4 192.168.2.200:/home/pub/asir/pepe
+
+dn: cn=profesor,ou=auto.home,ou=automontaje,dc=servus2,dc=inf
+objectClass: automount
+cn: profesor
+automountInformation: -fstype=nfs4 192.168.2.200:/home/pub/asir/profesor
+

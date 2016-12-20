@@ -1,0 +1,8 @@
+dn: olcOverlay={0}syncprov,olcDatabase={0}mdb,cn=config
+objectclass: olcOverlayConfig
+objectclass: olcSyncProvConfig
+objectclass: top
+olcoverlay: {0}syncprov
+olcspcheckpoint: 100 60
+olcspnopresent: TRUE
+olcspreloadhint: TRUE

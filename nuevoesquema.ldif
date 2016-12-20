@@ -1,0 +1,8 @@
+dn: cn=datos,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: datos
+olcAttributeTypes: {0}( 2.25.24197857203266734864793317670504947440 NAME 'fnac' DESC 'fecha de nacimiento' EQUALITY generalizedTimeMatch SYNTAX
+  1.3.6.1.4.1.1466.115.121.1.24 SINGLE-VALUE )
+olcAttributeTypes: {0}( 2.25.24197857203266734864793317670504947441 NAME 'fpm' DESC 'fecha primera matricula' EQUALITY generalizedTimeMatch SYNTAX
+  1.3.6.1.4.1.1466.115.121.1.24 SINGLE-VALUE )
+olcObjectClasses: {0}( 2.25.24197857203266734864793317670504947460 NAME 'informacion' AUXILIARY MAY (fnac $ fpm))

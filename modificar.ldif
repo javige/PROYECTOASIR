@@ -1,0 +1,4 @@
+changetype: modify
+add: objectClass
+objectClass: informacion
+

@@ -1,0 +1,118 @@
+dn: ou=dns,dc=servus2,dc=inf
+ou: dns
+objectClass: top
+objectClass: organizationalUnit
+
+dn: idnsName=servus2.inf,ou=dns,dc=servus2,dc=inf
+objectClass: top
+objectClass: idnsZone
+objectClass: idnsRecord
+idnsName: servus2.inf
+idnsZoneActive: TRUE
+idnsSOAmName: server.servus2.inf
+idnsSOArName: root.server.servus2.inf
+idnsAllowQuery: any;
+idnsAllowDynUpdate: TRUE
+idnsSOAserial: 1
+idnsSOArefresh: 10800
+idnsSOAretry: 900
+idnsSOAexpire: 604800
+idnsSOAminimum: 86400
+NSRecord: ns
+ARecord: 192.168.2.200
+
+dn: idnsName=ns,idnsName=servus2.inf,ou=dns,dc=servus2,dc=inf
+objectClass: idnsRecord
+objectClass: top
+idnsName: ns
+aRecord: 192.168.2.200
+
+dn: idnsName=server,idnsName=servus2.inf,ou=dns,dc=servus2,dc=inf
+objectClass: idnsRecord
+objectClass: top
+idnsName: server
+CNAMERecord: servus2.inf
+
+dn: idnsname=2.168.192.in-addr.arpa.,ou=dns,dc=servus2,dc=inf
+objectClass: idnszone
+objectClass: idnsrecord
+objectClass: top
+idnsName: 2.168.192.in-addr.arpa.
+idnsSOAmName: server.servus2.inf
+idnsSOArName: root.servus2.inf
+idnsSOAserial: 1350039556
+idnsSOArefresh: 10800
+idnsSOAretry: 900
+idnsSOAexpire: 604800
+idnsSOAminimum: 86400
+idnsZoneActive: TRUE
+idnsAllowDynUpdate: TRUE
+idnsAllowQuery: any;
+idnsAllowTransfer: none;
+nSRecord: server.servus2.inf.
+
+dn: idnsname=200,idnsname=2.168.192.in-addr.arpa.,ou=dns,dc=servus2,dc=inf
+objectClass: idnsrecord
+objectClass: top
+idnsName: 2001
+pTRRecord: servus2.inf
+
+dn: idnsname=10.168.192.in-addr.arpa.,ou=dns,dc=servus2,dc=inf
+objectClass: idnszone
+objectClass: idnsrecord
+objectClass: top
+idnsName: 10.168.192.in-addr.arpa.
+idnsSOAmName: server.servus2.inf
+idnsSOArName: root.servus2.inf
+idnsSOAserial: 1350039556
+idnsSOArefresh: 10800
+idnsSOAretry: 900
+idnsSOAexpire: 604800
+idnsSOAminimum: 86400
+idnsZoneActive: TRUE
+idnsAllowDynUpdate: TRUE
+idnsAllowQuery: any;
+idnsAllowTransfer: none;
+nSRecord: server.servus2.inf.
+
+dn: idnsName=pc1-t1,idnsName=servus2.inf,ou=dns,dc=servus2,dc=inf
+objectClass: idnsRecord
+objectClass: top
+idnsName: pc1-t1
+aRecord: 192.168.10.101
+
+dn: idnsname=101,idnsname=10.168.192.in-addr.arpa.,ou=dns,dc=servus2,dc=inf
+objectClass: idnsrecord
+objectClass: top
+idnsName: 101
+pTRRecord: pc1-t1.servus2.inf.
+
+dn: idnsname=20.168.192.in-addr.arpa.,ou=dns,dc=servus2,dc=inf
+objectClass: idnszone
+objectClass: idnsrecord
+objectClass: top
+idnsName: 20.168.192.in-addr.arpa.
+idnsSOAmName: server.servus2.inf
+idnsSOArName: root.servus2.inf
+idnsSOAserial: 1350039556
+idnsSOArefresh: 10800
+idnsSOAretry: 900
+idnsSOAexpire: 604800
+idnsSOAminimum: 86400
+idnsZoneActive: TRUE
+idnsAllowDynUpdate: TRUE
+idnsAllowQuery: any;
+idnsAllowTransfer: none;
+nSRecord: server.servus2.inf.
+
+dn: idnsName=pc1-t2,idnsName=servus2.inf,ou=dns,dc=servus2,dc=inf
+objectClass: idnsRecord
+objectClass: top
+idnsName: pc1-t2
+aRecord: 192.168.20.101
+
+dn: idnsname=101,idnsname=20.168.192.in-addr.arpa.,ou=dns,dc=servus2,dc=inf
+objectClass: idnsrecord
+objectClass: top
+idnsName: 101
+pTRRecord: pc1-t2.servus2.inf.
